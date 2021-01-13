@@ -1,0 +1,52 @@
+.label {
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  user-select: none;
+}
+.realInput {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  &:checked {
+    ~ .wrapper {
+      .fakeInput {
+        > svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.wrapper {
+  display: flex;
+}
+.fakeInput {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #f3f1ed;
+  position: relative;
+  transition: all .15s;
+  > svg {
+    display: block;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    right: 3px;
+    left: 3px;
+    opacity: 0;
+    transition: all .15s;
+    fill: #ff6c08;
+  }
+}
+.text {
+  font-size: 15px;
+  color: #5c5c61;
+  margin-left: 15px;
+  line-height: 1;
+  padding-top: 0.3em;
+}

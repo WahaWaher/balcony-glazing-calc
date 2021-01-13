@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * App container animation
+ */
+.app-anim-appear {
+  opacity: 0;
+}
+.app-anim-appear-active, .app-anim-appear-done {
+  opacity: 1;
+  transition: opacity 750ms, transform 750ms;
+}
+.app-anim-enter {
+  opacity: 0;
+}
+.app-anim-enter-active, .app-anim-enter-done {
+  opacity: 1;
+  transition: opacity 750ms, transform 750ms;
+}
+.app-anim-exit {
+  opacity: 1;
+}
+.app-anim-exit-active, .app-anim-exit-done {
+  opacity: 0;
+  transition: opacity 750ms, transform 750ms;
+}
+
+/**
+ * Design image animation
+ */
+.fade-appear {
+  opacity: 0;
+  transform: translateY(-7px);
+}
+.fade-appear-active, .fade-appear-done {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 180ms, transform 180ms;
+}
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-7px);
+}
+.fade-enter-active, .fade-enter-done {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 180ms, transform 180ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active, .fade-exit-done {
+  opacity: 0;
+  transform: translateY(-7px);
+  transition: opacity 180ms, transform 180ms;
+}

@@ -1,0 +1,115 @@
+.item {
+  display: block;
+  &_primary {
+    .title {
+      color: #39a1f3;
+    }
+    .checkboxTrue:checked {
+      ~ .itemWrapper {
+        &,
+        .checkbox {
+          border-color: #39a1f3;
+        }
+        .checkbox {
+          &:after {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="%2339a1f3"><path d="M5.1 8.2l2.4 4.9s4-9.9 10.2-13.1c-.2 2.3-.8 4.4.3 6.9-2.7.6-8.4 7.7-10.2 11.1-2.6-3.3-5.6-5.8-7.8-6.6z" /></svg>') no-repeat center;
+          }
+        }
+      }
+    }
+  }
+  &_accent {
+    .title {
+      color: #ff6c08;
+    }
+    .checkboxTrue:checked {
+      ~ .itemWrapper {
+        &,
+        .checkbox {
+          border-color: #ff6c08;
+        }
+        .checkbox {
+          &:after {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="%23ff6c08"><path d="M5.1 8.2l2.4 4.9s4-9.9 10.2-13.1c-.2 2.3-.8 4.4.3 6.9-2.7.6-8.4 7.7-10.2 11.1-2.6-3.3-5.6-5.8-7.8-6.6z" /></svg>') no-repeat center;
+          }
+        }
+      }
+    }
+  }
+}
+.itemWrapper {
+  cursor: pointer;
+  display: block;
+  border: 1px dashed #d4d4d4;
+  padding: 15px 20px 22px 20px;
+  user-select: none;
+}
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  flex-grow: 1;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.checkbox {
+  width: 26px;
+  height: 26px;
+  border: 1px dashed #d4d4d4;
+  border-radius: 2px;
+  background-color: #f2f1ed;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-size: cover;
+  }
+}
+.checkboxTrue {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  &:checked ~ {
+    .itemWrapper .checkbox {
+      &:after {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M5.1 8.2l2.4 4.9s4-9.9 10.2-13.1c-.2 2.3-.8 4.4.3 6.9-2.7.6-8.4 7.7-10.2 11.1-2.6-3.3-5.6-5.8-7.8-6.6z" /></svg>') no-repeat center;
+      }
+    }
+  }
+}
+.features {
+  margin: -20px 0;
+}
+.progressItem {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.progressTitle {
+  font-size: 15px;
+  color: #5c5c61;
+  width: 90px;
+}
+.progressBar {
+  flex-grow: 1;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+  position: relative;
+}
+.progressLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #3f627d;
+  border-radius: 10px;
+}

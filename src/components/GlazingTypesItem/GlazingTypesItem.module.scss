@@ -1,0 +1,114 @@
+.container {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  user-select: none;
+}
+.realInput {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &:checked {
+    ~ .wrapper {
+      cursor: default;
+      &.primary {
+        border-color: #0186ef;
+        .fakeInput {
+          border-color: #0186ef;
+          > svg {
+            fill: #0186ef;
+            opacity: 1;
+          }
+        }
+      }
+      &.accent {
+        border-color: #ff6c08;
+        .fakeInput {
+          border-color: #ff6c08;
+          > svg {
+            fill: #ff6c08;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.fakeInput {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #d5d5d5;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #f3f1ed;
+  transition: all .25s;
+  > svg {
+    display: block;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    fill: #d5d5d5;
+    opacity: 0;
+    transition: all .25s;
+  }
+}
+.wrapper {
+  border: 2px dashed #d5d5d5;
+  padding: 15px 20px 20px 20px;
+  transition: all .25s;
+  &.primary {
+    .title {
+      color: #0186ef;
+    }
+    &:hover {
+      border-color: #0186ef;
+    }
+  }
+  &.accent {
+    .title {
+      color: #ff6c08;
+    }
+    &:hover {
+      border-color: #ff6c08;
+    }
+  }
+}
+.title {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 700;
+  padding-right: 35px;
+  margin-bottom: 35px;
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+  &Accent {
+    color: #ff6c08;
+  }
+  &Primary {
+    color: #0186ef;
+  }
+}
+.features {
+  margin: -15px 0;
+  &Item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    &Title {
+      width: 78px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #5c5c61;
+    }
+    &Progress {
+      flex-grow: 1;
+    }
+  }
+}

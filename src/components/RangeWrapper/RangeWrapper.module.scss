@@ -1,0 +1,101 @@
+/**
+ * Range Before/After (gorizontal)
+ */
+.rangeBefore,
+.rangeAfter {
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  top: -6px;
+  background-color: #d4d4d4;
+  z-index: -1;
+}
+.rangeBefore {
+  left: 0;
+  &Vertical {}
+}
+.rangeAfter {
+  right: 0;
+  &Vertical {}
+}
+
+/**
+ * Range Before/After (vertical)
+ */
+.rangeBeforeVertical,
+.rangeAfterVertical {
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  left: -6px;
+  background-color: #d4d4d4;
+  z-index: -1;
+}
+.rangeBeforeVertical {
+  top: 0;
+}
+.rangeAfterVertical {
+  bottom: 0;
+}
+
+/**
+ * Range Track
+ */
+.rangeTrack {
+  display: flex;
+}
+.rangeThumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #fd9800;
+  background: linear-gradient(to right, #fd9800 0%, #e11c00 100%);
+  box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.47);
+  outline: none;
+}
+
+/**
+ * Range Tip
+ */
+.rangeTip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -50%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  background-color: #ff6c08;
+}
+.rangeTipGorizontal {
+  min-width: 52px;
+  height: 25px;
+  top: 100%;
+  transform: translate(-2px, 15px);
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 95%;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #ff6c08;
+  }
+}
+.rangeTipVertical {
+  min-width: 52px;
+  height: 25px;
+  top: 50%;
+  right: 100%;
+  left: auto;
+  transform: translate(-15px, -50%);
+  &:before {
+    content: '';
+    position: absolute;
+    left: 97%;
+    border: 6px solid transparent;
+    border-left: 6px solid #ff6c08;
+  }
+}

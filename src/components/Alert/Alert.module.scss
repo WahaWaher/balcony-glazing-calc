@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+.iconContainer {
+  width: 45px;
+  flex-shrink: 0;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+  color: #bbb;
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 700;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+}
+.text {
+  color: #5c5c61;
+  font-size: 14px;
+}
