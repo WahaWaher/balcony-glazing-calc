@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-// import classNames from 'classnames';
 
 import RangeWrapper from '@/components/RangeWrapper/RangeWrapper';
 import BalconyDesign from '@/components/BalconyDesign/BalconyDesign';
